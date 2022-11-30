@@ -6,6 +6,7 @@ class Measurement(models.Model):
     unit = models.CharField(max_length=50)
     place = models.CharField(max_length=50)
     dateTime = models.DateTimeField(auto_now_add=True)
+    place = models.IntegerField(null=False, default=None)
 
     def __str__(self):
         return '%s %s' % (self.value, self.unit)
